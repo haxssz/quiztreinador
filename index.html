@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>12 Eixos do Treinador — qual é o seu estilo?</title>
+  <meta name="description" content="Responda 30, 60 ou 90 afirmações e descubra seu perfil tático em 12 eixos, o treinador e o time com quem você mais se parece.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#" id="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M12 4v16"/><circle cx="12" cy="12" r="3"/><path d="M2 9h3v6H2M22 9h-3v6h3"/></svg>
+      </span>
+      <span class="brand-text">12 Eixos<small>do Treinador</small></span>
+    </a>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Alternar tema claro/escuro">◐</button>
+  </header>
+
+  <main>
+    <!-- INÍCIO -->
+    <section id="home" class="screen">
+      <div class="hero">
+        <p class="eyebrow">Teste tático</p>
+        <h1>Que tipo de treinador<br>você seria?</h1>
+        <p class="lead">Responda de 30 a 90 afirmações sobre tática e gestão e descubra seu perfil em 12 eixos, o treinador e o time com quem você mais se parece.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#modes" id="chooseBtn">Escolher o teste</a>
+          <button class="btn ghost" id="resumeBtn" type="button" hidden>Continuar de onde parei</button>
+        </div>
+        <ul class="facts">
+          <li><strong>12</strong> eixos</li>
+          <li><strong>48</strong> treinadores</li>
+          <li><strong>34</strong> times</li>
+        </ul>
+      </div>
+
+      <section class="block" id="modes" aria-labelledby="modesTitle">
+        <h2 class="block-title" id="modesTitle">Escolha o tamanho do teste</h2>
+        <p class="block-sub">Quanto mais perguntas, mais preciso fica o resultado. Você pode sair a qualquer momento.</p>
+        <div class="modes" id="modesGrid"></div>
+      </section>
+
+      <section class="block" aria-labelledby="howTitle">
+        <h2 class="block-title" id="howTitle">Como funciona</h2>
+        <ol class="steps">
+          <li><span class="n">1</span><div><b>Responda</b><p>Cada tela traz uma afirmação. Você diz o quanto concorda, de &ldquo;concordo totalmente&rdquo; a &ldquo;discordo totalmente&rdquo;.</p></div></li>
+          <li><span class="n">2</span><div><b>Veja seus 12 eixos</b><p>Cada resposta puxa você para um lado de um eixo: posse ou jogo direto, pressão alta ou bloco baixo, e assim por diante.</p></div></li>
+          <li><span class="n">3</span><div><b>Descubra seus parecidos</b><p>Comparamos seu perfil com 48 treinadores e 34 times, de campeões da Champions a lendas do Brasil.</p></div></li>
+        </ol>
+      </section>
+
+      <section class="block" aria-labelledby="axesTitle">
+        <h2 class="block-title" id="axesTitle">Os 12 eixos</h2>
+        <p class="block-sub">É isso que o teste mede. Em cada eixo você fica mais perto de um polo ou do outro.</p>
+        <div class="axes-preview" id="axesPreview"></div>
+      </section>
+
+      <section class="block" aria-labelledby="findTitle">
+        <h2 class="block-title" id="findTitle">O que você vai descobrir</h2>
+        <div class="find">
+          <div class="find-card"><span class="ico">🧠</span><b>Seu perfil tático</b><p>Um resumo dos seus traços mais fortes e as porcentagens em cada eixo.</p></div>
+          <div class="find-card"><span class="ico">🧢</span><b>Seu treinador</b><p>Os técnicos mais parecidos com você, com filtro de campeões da Champions e do futebol brasileiro.</p></div>
+          <div class="find-card"><span class="ico">🏟️</span><b>Seu time</b><p>O clube ou a seleção cujo jeito de jogar mais combina com o seu.</p></div>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="faqTitle">
+        <h2 class="block-title" id="faqTitle">Perguntas frequentes</h2>
+        <div class="faq">
+          <details><summary>Não existe resposta certa?</summary><p>Não. Os eixos não são melhores nem piores: grandes títulos já foram conquistados com todos os estilos.</p></details>
+          <details><summary>Como o treinador e o time são escolhidos?</summary><p>Cada treinador e cada time tem um perfil nos mesmos 12 eixos. Calculamos a distância entre o seu perfil e o deles: quanto menor, maior a afinidade.</p></details>
+          <details><summary>Esses perfis são oficiais?</summary><p>Não. São uma leitura subjetiva do estilo de cada treinador e da identidade de cada time, feita para diversão.</p></details>
+          <details><summary>Posso parar no meio?</summary><p>Pode. Use o botão &ldquo;Sair&rdquo; durante o teste: seu progresso fica salvo, ou você pode ver um resultado parcial depois de algumas respostas.</p></details>
+        </div>
+      </section>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="screen" hidden>
+      <div class="quiz-top">
+        <p class="counter" id="counter">Pergunta 1 de 60</p>
+        <button class="btn ghost small" id="exitBtn" type="button">Sair</button>
+      </div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <h2 class="statement" id="statement"></h2>
+      <div class="answers" id="answers"></div>
+      <div class="quiz-nav">
+        <button class="btn ghost small" id="backBtn" type="button">← Voltar</button>
+        <span class="hint">Dica: use as teclas 1 a 5</span>
+      </div>
+    </section>
+
+    <!-- RESULTADO -->
+    <section id="result" class="screen" hidden>
+      <div class="result-head">
+        <p class="eyebrow" id="resultEyebrow">Seu perfil</p>
+        <h2 id="profileTitle"></h2>
+        <p class="lead" id="profileLead"></p>
+      </div>
+
+      <div class="top-matches" id="topMatches"></div>
+
+      <h3 class="section-title">Seus 12 eixos</h3>
+      <div class="axes" id="axesResult"></div>
+
+      <h3 class="section-title">Quem se parece com você</h3>
+      <div class="tabs" id="tabs" role="tablist"></div>
+      <div class="chips" id="chips" role="tablist"></div>
+      <div class="coach-list" id="coachList"></div>
+      <button class="btn ghost" id="moreBtn" type="button">Ver mais</button>
+
+      <div class="opposite" id="opposite"></div>
+
+      <div class="result-actions">
+        <button class="btn primary" id="shareBtn" type="button">Copiar resultado</button>
+        <button class="btn ghost" id="retryBtn" type="button">Refazer o teste</button>
+      </div>
+      <p class="toast" id="toast" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <!-- Confirmação de saída -->
+  <div class="modal" id="exitModal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+      <h3 id="exitTitle">Sair do teste?</h3>
+      <p id="exitInfo"></p>
+      <div class="modal-actions">
+        <button class="btn primary" id="exitContinue" type="button">Continuar o teste</button>
+        <button class="btn ghost" id="exitFinish" type="button" hidden>Ver resultado parcial</button>
+        <button class="btn ghost" id="exitSave" type="button">Sair e guardar progresso</button>
+        <button class="btn ghost danger" id="exitDiscard" type="button">Sair e descartar</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="foot">
+    <p>Teste feito por diversão. Os perfis dos treinadores e dos times são uma leitura subjetiva de estilo, não uma medida oficial. Inspirado no formato dos testes de eixos.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
